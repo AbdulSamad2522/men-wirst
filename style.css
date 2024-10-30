@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Jost", sans-serif;
+}
+.bg-darker{
+    background: #141414;
+}
+.font{
+  font-family: "Halant",;
+  font-weight: 200;
+}
+.poppins{
+  font-family: "Poppins";
+}
+.icon{
+    color: #e1e1e1;
+}
+.icon:hover{
+    color: #cbb18b;
+}
+.icon:focus{
+    color: crimson;
+}
+.icon:focus::after{
+    color: crimson;
+}
+.navbar{
+  z-index: 1;
+}
+.add-to-cart{
+  background-color: #000;
+  height: 100vh;
+  width: 30%;
+  border-left: 1px solid #afa9a954;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.add-to-cart-sm{
+  background-color: #000;
+  height: 100vh;
+  width: 90%;
+  border-left: 1px solid #afa9a954;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 300;
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  .button:focus,
+  .button:hover {
+    color: #cbb18b;
+  }
+  
+  .button:focus:after,
+  .button:hover:after {
+    width: 80%;
+    left: 10%;
+  } 
+  .button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #cbb18b;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  .active{
+    color: #cbb18b;
+}
+.top{
+    border-bottom: 0.01rem solid #55555585;
+    font-size: smaller;
+    color: rgba(245, 245, 220, 0.755);
+}
+/* <reset-style> ============================ */
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  /* ============================ */
+  /* <style for bg> ======== */
+  .background {
+    border-radius: 16px;
+    border: 1px solid #1a1a1a;
+    background: rgba(74, 74, 74, 0.39);
+    mix-blend-mode: luminosity;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(15px);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* <style for menu__icon> ======== */
+  .menu__icon {
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .menu__icon span {
+    width: 100%;
+    height: 0.125rem;
+    border-radius: 0.125rem;
+    background-color: rgb(114, 115, 116);
+    box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
+    transition: transform .4s, background-color .4s, width .4s, opacity .4s;
+  }
+  
+  .menu__icon span:nth-child(2) {
+    width: 60%;
+  }
+  .video{
+    transform: translateY(-80px);
+    width: 100%;
+    height: 90%;
+  }
+  
+.banner-text{
+  position: absolute;
+  top: 70%;
+  right: 7%;
+} 
+.banner-text-sm{
+  transform: translateY(-130px);
+}
+.text{
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #e1e1e1;
+}
+.bg-darkest{
+  background-color: #000;
+}
+.card-watch{
+  height: 63vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.watch:hover{
+  cursor: pointer;
+  filter: brightness(70%);
+}
+.watch{
+  position: relative;
+}
+.band{
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  background: #cbb18b;
+}
+.band small{
+  font-size: 0.6rem;
+  font-weight: 600;
+
+}
+.watch small{
+  color: #e1e1e1d3;
+}
+.shop{
+  position: absolute;
+  bottom: 15px;
+}
+.shop{
+  width: 80%;
+  background: #cbb18b;
+  color: #141414;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:all 0.2s linear;
+}
+.watch:hover .shop{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: inherit;
+  transform: translateY(-8px);
+}
+/* ---------sm */
+.shop-sm{
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+}
+.shop-sm{
+  width: 80%;
+  background: #cbb18b;
+  color: #141414;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:all 0.2s linear;
+}
+.watch:hover .shop-sm{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: inherit;
+  transform: translateY(-8px);
+}
+.back video{
+  width: 50%;
+}
+.big-banner{
+  background-image: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dwf90ac43e/images/homepage/2024/2024-09/TAG_Heuer_carrera_extreme_sport_usp_soldat.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 55vh;
+}
+.parent{
+  position: relative;
+  margin-left: 20px;
+}
+.png-watch{
+background-image: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-1035?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+background-position: center;
+background-size: cover;
+height: 46vh;
+position: absolute;
+top: -150px;
+cursor: pointer;
+transition:all 0.5s ease-in-out;
+
+}
+.png-watch:nth-child(2){
+  background-image: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-956?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  right: 0;
+  transition:all 0.5s ease-in-out;
+
+}
+.png-watch:hover{
+  transform: scale(1.02);
+  transition:all 0.5 ease-in-out;
+}
+.small-band{
+  background-color: #cbb18b;
+  font-size: 0.6rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  font-weight: 500;
+}
+.png-watch:hover .small-band{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: inherit;
+  transition:all 0.2s linear;
+}
+.big-video{
+scrollbar-width: none;  
+}
+::-webkit-scrollbar{
+  /* display: none; */
+}
+.men{
+  background: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dw61b430a8/images/homepage/2024/2024-09/push-collection-watches-for-men.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+}
+.men1{
+  background: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dw61b430a8/images/homepage/2024/2024-09/push-collection-watches-for-men.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+}
+.men h1{
+  font-weight: 600;
+}
+.women h1{
+  font-weight: 600;
+}
+.women{
+  background: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dw0ecc7b6b/images/homepage/2024/2024-09/push-collection-watches-for-women.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+}
+.women1{
+  background: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dw0ecc7b6b/images/homepage/2024/2024-09/push-collection-watches-for-women.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+}
+.inner{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #68050500, #000000);
+}
+.vid-parent{
+  position: relative;
+}
+.video-1{
+  position: relative;
+  left: 22%;
+}
+.social{
+  border-bottom: 0.3px solid #8a88883e;
+  border-top: 0.3px solid #8a88883e;
+}
+.text-icon{
+  border-right: 0.3px solid #8a88883e;
+  color: #8a8888;
+}
+.text-icon i{
+  color: #8a8888;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.text-icon i:hover{
+  color: #cbb18b;
+}
+.list:hover{
+  color: #cbb18b;
+  cursor: pointer;
+}
+.smaller{
+  font-size: 0.8rem;
+  color: #f3ececc6;
+}
+/* -----------------Contact */
+.banner{
+  background: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dwf0dbb53d/images/ContactUs/top-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 65vh;
+}
+.banner-contant-sm{
+  background: url(https://www.tagheuer.com/on/demandware.static/-/Library-Sites-TagHeuer-Shared/default/dwf0dbb53d/images/ContactUs/top-banner.jpg);
+  background-position: left;
+  background-size: cover;
+  height: 65vh;
+}
+.contact-inner{
+  margin-top: 30px;
+  color: #e1e1e1;
+  text-align: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.contact-inner:hover{
+background: #000000;
+}
+.contact-inner:hover p{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: inherit;
+  transform: translateY(10px);
+}
+.contact-inner .content i{
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+.contact-inner p{
+  margin-top: -10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.4s all ease-in-out;
+}
+/* -----------Product */
+.product-banner{
+  position: absolute;
+  top: 45%;
+  left: 10%;
+}
+.product-banner-sm{
+  position: absolute;
+  top: 22%;
+  /* color: white; */
+}
+.product-banner h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: #000;
+}
+.input-div-btn {
+  position: fixed;
+  z-index: 1;
+  bottom: 3%;
+  left: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #cbb18b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 100px #cbb18b , inset 0px 0px 10px #cbb18b,0px 0px 5px rgb(255, 255, 255);
+  animation: flicker 2s linear infinite;
+  cursor: pointer;
+}
+
+.input-div-btn .icon {
+  /* color: rgb(1, 235, 252); */
+  color: #cbb18b;
+  font-size: 1.1rem;
+  cursor: pointer;
+  animation: iconflicker 2s linear infinite;
+}
+
+.input-btn {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+}
+
+@keyframes flicker {
+  0% {
+    border: 2px solid #cbb18b;
+    box-shadow: 0px 0px 100px #cbb18b , inset 0px 0px 10px #cbb18b,0px 0px 5px rgb(255, 255, 255);
+  }
+
+  5% {
+    border: none;
+    box-shadow: none;
+  }
+
+  10% {
+    border: 2px solid #cbb18b;
+    box-shadow: 0px 0px 100px #cbb18b , inset 0px 0px 10px #cbb18b,0px 0px 5px rgb(255, 255, 255);
+  }
+
+  25% {
+    border: none;
+    box-shadow: none;
+  }
+
+  30% {
+    border: 2px solid #cbb18b;
+    box-shadow: 0px 0px 100px #cbb18b , inset 0px 0px 10px #cbb18b,0px 0px 5px rgb(255, 255, 255);
+  }
+
+  100% {
+    border: 2px solid #cbb18b;
+    box-shadow: 0px 0px 100px #cbb18b , inset 0px 0px 10px #cbb18b,0px 0px 5px rgb(255, 255, 255);
+  }
+}
+
+@keyframes iconflicker {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 0.2;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* product */
+.product{
+  position: fixed;
+  /* border: 1px solid #fff; */
+  z-index: 2;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  overflow: auto;
+  box-shadow: 0 0 12px #444444;
+}
+.button-cut {
+  position: absolute;
+  left: 96.2%;
+  top: 2%;
+  width: 2em;
+  height: 2em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+.button-cut-sm {
+  position: absolute;
+  left: 88.2%;
+  top: 2%;
+  width: 2em;
+  height: 2em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button-cut:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.button-cut:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.button-cut:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+.small-img-product{
+  height: 90px;
+  width: 90%;
+  cursor: pointer;
+}
+.product-image{
+  height: 74.4vh;
+}
+.container-heart input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container-heart {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  transition: 100ms;
+}
+.checkmark {
+  top: 0;
+  left: 0;
+  height: 1.2em;
+  width: 1.2em;
+  transition: 100ms;
+  animation: dislike_effect 400ms ease;
+}
+.container-heart input:checked ~ .checkmark path {
+  fill: #FF5353;
+  stroke-width: 0;
+}
+.container-heart input:checked ~ .checkmark {
+  animation: like_effect 400ms ease;  
+}
+.container-heart:hover {
+  transform: scale();
+}
+@keyframes like_effect {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dislike_effect {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.btn-product {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 8px;
+  width: 100%;
+  /* border-radius: ; */
+  border: none;
+  background-image: linear-gradient(120deg, #1a1a1a 0%, #2c2829 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-product > * {
+  display: inline-block;
+  transition: all ease-in-out .5s;
+}
+
+.btn__visible {
+  padding: 1.2rem 3rem;
+  text-align: center;
+}
+
+.btn__invisible {
+  width: 100%;
+  position: absolute;
+  padding: 1.2rem 0;
+  left: 0;
+  top: -100%;
+}
+
+.btn-product:hover {
+  background-image: linear-gradient(160deg, #fdfafa 0%, #f8f6f7 100%);
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-product:hover .btn__visible {
+  transform: translateY(100%);
+}
+
+.btn-product:hover .btn__invisible {
+  top: 0;
+}
+
+.btn-product:focus {
+  outline: none;
+}
+.product-image{
+  background: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-1035?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.small-img-product{
+  background-image: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-871?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 5px #484848;
+  transition: 0.5s ease-in-out;
+}
+.small-img-product:hover{
+transform: scale(1.1);
+}
+.small-img-product:nth-child(2){
+  background: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-777?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.small-img-product:nth-child(3){
+  background-image: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-1033?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.small-img-product:nth-child(4){
+  background-image: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-904?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.small-img-product:nth-child(5){
+  background-image: url(https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-1085?size=568,0&dpr=off&fmt=avif-alpha&dpr=off);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.form-control:focus{
+  box-shadow: 0px 0px 10px #cbb18b5e;
+  color: #fff;
+}
+.social-input{
+  position: absolute;
+  bottom: 2%; 
+  width: 97%;
+}
+/* .social-input-sm{
+  position: ;
+  bottom: -4%; 
+  width: 97%;
+} */
+.img-box a{
+  background-color: #cbb18b8a;
+  backdrop-filter: blur(3%);
+}
+.img-box a i{
+  transition:all 0.5s ease-in-out;
+}
+.img-box a:hover i{
+  transform: scale(1.5);
+}
+.sm-img{
+width: 100px;
+height: 100px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background: url();
+border: 0.3px dashed #8a8888;
+}
+.file-upload-form {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-upload-label input {
+  display: none;
+}
+.file-upload-label svg {
+  height: 30px;
+  fill: rgb(82, 82, 82);
+  margin-bottom: 10px;
+}
+.file-upload-label {
+  cursor: pointer;
+  padding: 10px 100px;
+  border-radius: 10px;
+  border: 2px dashed rgb(82, 82, 82);
+  box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+}
+.file-upload-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.browse-button {
+  background-color: rgb(82, 82, 82);
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s;
+}
+.browse-button:hover {
+  background-color: rgb(14, 14, 14);
+}
+.change li{
+color: #afa9a9;
+}
+.my-link{
+  position: absolute;
+  right: 1%;
+  bottom: 5.5%;
+}
+.save-button {
+  position: absolute;
+  bottom: 10.5%;
+  right: 23%;
+  font-family: inherit;
+  font-size: 15px;
+  background: #212121;
+  color: white;
+  fill: rgb(155, 153, 153);
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  font-weight: 1000;
+}
+
+.save-button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.save-button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.save-button:hover {
+  background: #000;
+}
+
+.save-button:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+
+.save-button:hover svg {
+  transform: translateX(1.2em) scale(1.1);
+  fill: #fff;
+}
+
+.save-button:hover span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.save-button:active {
+  transform: scale(0.95);
+}
